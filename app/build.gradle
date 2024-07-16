@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        pickFirst 'META-INF/ASL2.0'
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+    implementation 'com.android.volley:volley:1.2.1'
+
+    implementation 'org.osmdroid:osmdroid-android:6.1.13'
+    implementation 'javax.ws.rs:javax.ws.rs-api:2.0.1'
+
+//    implementation 'com.mapbox.maps:android:10.9.1'
+//
+//    implementation ('com.mapbox.maps:android:10.9.1'){
+//        exclude group: 'group_name', module: 'module_name'
+
+//    implementation "com.mapbox.navigation:ui-dropin:2.9.2"
+//    implementation 'com.mapbox.maopboxsdk:mapbox-android-sdk:9.0.0'
+//    implementation 'com.mapbox.maopboxsdk:mapbox-android-navigation-ui.2.9.2'
+//    implementation 'com.mapbox.maopboxsdk:mapbox-android-plugin-places-v9:0.12.0'
+//    implementation 'com.mapbox.maopboxsdk:mapbox-android-telemetry:5.0.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+
+}

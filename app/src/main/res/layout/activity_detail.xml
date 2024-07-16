@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2B5491"
+    tools:context=".DetailActivity">
+
+
+    <ImageView
+        android:id="@+id/detailed_header"
+        android:layout_width="412dp"
+        android:layout_height="291dp"
+        android:transitionName="background_image_transition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/detailed_hotel_king" />
+
+    <ImageView
+        android:id="@+id/down_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:src="@drawable/ic_down_arrow"
+        app:layout_constraintEnd_toEndOf="@+id/detailed_header"
+        app:layout_constraintTop_toTopOf="@+id/detailed_header" />
+
+    <ScrollView
+        android:id="@+id/third_scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailed_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_detailed_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="The STRAT Hotel"
+
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/txt_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text=", Restaurant"
+
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="4dp"
+
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/sample_accessibily_icon"
+                        android:layout_width="39dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="0.5"
+                        app:srcCompat="@drawable/accessibility_default" />
+
+                    <TextView
+                        android:id="@+id/sample_accessibily_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="No comment has been added." />
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/edit_accessiblity_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="26dp"
+                            android:layout_marginLeft="26dp"
+                            app:srcCompat="@drawable/edit" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/accessibility_gallery_button"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/gallery_icon" />
+
+                            <ImageView
+                                android:id="@+id/add_access_img_button"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/add_img_icon" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/sample_toilet_access_icon"
+                        android:layout_width="39dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="0.5"
+                        app:srcCompat="@drawable/accessible_toilet_default" />
+
+                    <TextView
+                        android:id="@+id/sample_toilet_access_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="No comment has been added." />
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/edit_toilet_access_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="26dp"
+                            android:layout_marginLeft="26dp"
+                            app:srcCompat="@drawable/edit" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/toilet_access_gallery_button"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/gallery_icon" />
+
+                            <ImageView
+                                android:id="@+id/add_toilet_access_img_button"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/add_img_icon" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="4dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/sample_parking_access_icon"
+                        android:layout_width="39dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="0.5"
+                        app:srcCompat="@drawable/accessible_parking_default" />
+
+                    <TextView
+                        android:id="@+id/sample_parking_access_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="No comment has been added." />
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/edit_parking_access_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="26dp"
+                            android:layout_marginLeft="26dp"
+                            app:srcCompat="@drawable/edit" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/parking_access_gallery_button"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/gallery_icon" />
+
+                            <ImageView
+                                android:id="@+id/add_parking_access_img_button"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/add_img_icon" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/sample_location_access_icon"
+                        android:layout_width="39dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="0.5"
+                        app:srcCompat="@drawable/accesible_location_default" />
+
+                    <TextView
+                        android:id="@+id/sample_location_access_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="No comment has been added." />
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/edit_location_access_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="26dp"
+                            android:layout_marginLeft="26dp"
+                            app:srcCompat="@drawable/edit" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/location_access_gallery_button"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/gallery_icon" />
+
+                            <ImageView
+                                android:id="@+id/add_location_access_img_button"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/add_img_icon" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="About"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:alpha="0.5"
+
+                android:text="Top of the World is known as one of the
+most romantic restaurants in the city. It offers
+an intimate dining setting paired with
+an extravagant view of the entire city, all
+encompassed in a 360-degree revolving frame.
+Yes, that’s right, this restaurant allows diners
+the opportunity to see Las Vegas in its entirety
+if they’re able to stay for at least 80 minutes,
+the time needed for one full rotation."
+                android:textSize="15sp" />
+
+
+            <Button
+                android:id="@+id/roadmap_button"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/white"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="C H E C K   R O A D M A P"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="72dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/home_button"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_home"
+                    app:layout_constraintEnd_toStartOf="@+id/img_home"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_assist"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/assistant_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_assist" />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
